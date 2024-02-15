@@ -1,10 +1,11 @@
 import './App.scss'
+import { ProgressBar } from './components/ProgressBar/ProgressBar'
 
 function App() {
 
   return (
     <>
-      Hello world!
+      <ProgressBar numberOfQuiz={1} fillPercentage={80} />
     </>
   )
 }

@@ -1,0 +1,7 @@
+{
+  "initial-page": {
+    "title": "What is your preferred language?",
+    "sub-title": "Choose language",
+    "options": ["English", "French", "German", "Spanish"]
+  }
+}

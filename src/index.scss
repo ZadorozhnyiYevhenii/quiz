@@ -1,1 +1,12 @@
 @import 'normalize.css';
+@import "./styleutils/variables.scss";
+
+html {
+  font-family: "Albert Sans", sans-serif;
+  background-color: $background-color;
+  color: $main-text-color;
+}
+
+button {
+  background-color: #36173d;
+}
