@@ -1,0 +1,5 @@
+@import "../../styleutils/mixins.scss";
+
+.quiz-title {
+  @include h1-title
+}
