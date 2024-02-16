@@ -10,12 +10,7 @@
   },
   "age-page": {
     "title": "Wie alt bist du?",
-    "age-options": {
-      "young": "18-29 Jahre",
-      "adult": "30-39 Jahre",
-      "middle-age": "40-49 Jahre",
-      "oldEnough": "50+"
-    }
+    "options": ["18-29 Jahre", "30-39 Jahre", "40-49 Jahre", "50+"]
   },
   "hate-page": {
     "title": "Was hasst du an einem Buch am meisten?",

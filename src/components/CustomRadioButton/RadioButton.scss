@@ -1,0 +1,28 @@
+@import "../../styleutils/variables.scss";
+
+.radio-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__clear {
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    background-color: $radio-btn-color;
+    border-radius: 8px;
+    right: 10%;
+    bottom: 28px;
+    border: 1px solid $bar-color;
+    transition: background-color .2s ease-in;
+
+    &.clicked {
+      background-image: url(../../assets/checked-icon.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: $bar-color;
+    }
+  }
+}

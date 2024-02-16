@@ -4,7 +4,6 @@ import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { barPercenteges } from "../../utils/barPercentages";
 import { BackButton } from "../../components/BackButton/BackButton";
-import { AgeOptions } from "../../utils/ageOptions";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
 import "./AgePage.scss";
 
@@ -16,6 +15,8 @@ export const AgePage = () => {
     navigate("/quiz/3");
   };
 
+  const ages = t('age-page.options', { returnObjects: true });
+
   return (
     <div className="age">
       <BackButton />
@@ -23,10 +24,10 @@ export const AgePage = () => {
       <QuizTitle title={t("age-page.title")} />
 
       <ul className="age__list">
-        {AgeOptions().map((option) => (
-          <li className="age__item" key={option.id}>
+        {ages.map((option, index) => (
+          <li className="age__item" key={index}>
             <CustomButton
-              title={option.title}
+              title={option}
               height={76}
               onCLick={handleAge}
             />
