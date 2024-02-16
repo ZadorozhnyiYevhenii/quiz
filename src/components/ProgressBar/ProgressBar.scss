@@ -10,7 +10,7 @@
   &__wrap {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 5px;
   }
 
   &__page-total {
@@ -25,14 +25,12 @@
     font-size: 18px;
     line-height: 20px;
     color: $bar-color;
+  }
 
-    &::after {
-      content: '/';
-      position: absolute;
-      color: $main-text-color;
-      left: 10px;
-      font-weight: 500;
-    }
+  &__bracket {
+    color: $main-text-color;
+    left: 15px;
+    font-weight: 500;
   }
 
   &__bar {

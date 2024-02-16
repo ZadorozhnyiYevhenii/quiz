@@ -1,10 +1,21 @@
 {
   "gender-page": {
     "title": "À quel genre vous identifiez-vous?",
-    "subtitle": "Veuillez partager comment vous identifiez-vous"
+    "subtitle": "Veuillez partager comment vous identifiez-vous",
+    "genders": {
+      "male": "Mâle",
+      "female": "Femelle",
+      "other": "Autre"
+    }
   },
   "age-page": {
-    "title": "Quel âge avez-vous?"
+    "title": "Quel âge avez-vous?",
+    "age-options": {
+      "young": "18-29 ans",
+      "adult": "30-39 ans",
+      "middle-age": "40-49 ans",
+      "oldEnough": "50+"
+    }
   },
   "hate-page": {
     "title": "Qu’est-ce que tu détestes le plus dans un livre ?",

@@ -5,10 +5,21 @@
   },
   "gender-page": {
     "title": "What gender do you identify with?",
-    "subtitle": "Please share how do you identify yourself"
+    "subtitle": "Please share how do you identify yourself",
+    "genders": {
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    }
   },
   "age-page": {
-    "title": "What is your age?"
+    "title": "What is your age?",
+    "age-options": {
+      "young": "18-29 years",
+      "adult": "30-39 years",
+      "middle-age": "40-49 years",
+      "oldEnough": "50+"
+    }
   },
   "hate-page": {
     "title": "What do you hate the most in a book?",

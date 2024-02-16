@@ -1,0 +1,21 @@
+@import "../../styleutils/variables.scss";
+
+.square-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  flex: 1;
+
+  &__emoji {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  &__title {
+    color: $main-text-color;
+  }
+}

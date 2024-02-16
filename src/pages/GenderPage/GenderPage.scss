@@ -1,0 +1,12 @@
+.gender {
+  &__list {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  &__item {
+    flex: 0 0 calc(30% - 10px);
+  }
+}

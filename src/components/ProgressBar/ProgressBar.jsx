@@ -6,6 +6,7 @@ export const ProgressBar = ({ numberOfQuiz, fillPercentage }) => {
     <div className='progress'>
       <span className='progress__wrap'>
         <span className='progress__page-number'>{numberOfQuiz}</span>
+        <span className='progress__bracket'>/</span>
         <span className='progress__page-total'>{totalQuizesNumber}</span>
       </span>
       <div className='progress__bar'>
