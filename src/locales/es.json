@@ -1,2 +1,14 @@
-{}
+{
+  "gender-page": {
+    "title": "Por favor comparte como te identificas",
+    "subtitle": "Por favor comparte como te identificas"
+  },
+  "age-page": {
+    "title": "¿Cuál es tu edad?"
+  },
+  "hate-page": {
+    "title": "¿Qué es lo que más odias en un libro?",
+    "options": ["Falta de lógica", "Una velocidad lenta", "Falta de humor", "Final demasiado genérico"]
+  }
+}
 

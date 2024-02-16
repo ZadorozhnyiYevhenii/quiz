@@ -1,7 +1,17 @@
 {
   "initial-page": {
     "title": "What is your preferred language?",
-    "subtitle": "Choose language",
-    "options": ["English", "French", "German", "Spanish"]
+    "subtitle": "Choose language"
+  },
+  "gender-page": {
+    "title": "What gender do you identify with?",
+    "subtitle": "Please share how do you identify yourself"
+  },
+  "age-page": {
+    "title": "What is your age?"
+  },
+  "hate-page": {
+    "title": "What do you hate the most in a book?",
+    "options": ["Lack of logic", "A slow speed", "Lack of humor", "Way too generic ending"]
   }
 }

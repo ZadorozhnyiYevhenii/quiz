@@ -1,0 +1,8 @@
+@import "../../styleutils/mixins.scss";
+
+.custom-button {
+  @include custom-button;
+  text-align: left;
+  color: #fff;
+  padding-left: 20px;
+}

@@ -1,9 +1,19 @@
 @import "../../styleutils/mixins.scss";
 
 .quiz-title {
-  @include h1-title
-}
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-.quiz-description {
-  @include h3-title
+  &__main {
+    @include h1-title;
+    margin-inline: 16px;
+    text-align: center;
+  }
+
+  &__description {
+    @include h3-title
+  }
 }

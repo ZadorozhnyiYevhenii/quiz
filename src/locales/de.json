@@ -1,1 +1,13 @@
-{}
+{
+  "gender-page": {
+    "title": "Mit welchem Geschlecht identifizierst du dich?",
+    "subtitle": "Bitte teilen Sie uns mit, wie Sie sich identifizieren"
+  },
+  "age-page": {
+    "title": "Wie alt bist du?"
+  },
+  "hate-page": {
+    "title": "Was hasst du an einem Buch am meisten?",
+    "options": ["Mangel an Logik", "Eine langsame Geschwindigkeit", "Mangel an Humor", "Viel zu allgemeines Ende"]
+  }
+}
