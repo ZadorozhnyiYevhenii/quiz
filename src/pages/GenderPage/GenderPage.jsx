@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { barPercenteges } from "../../utils/barPercentages";
-import { GenderOptions } from "../../utils/gendersoptions";
+import { GenderOptions } from "../../utils/gendersOptions";
 import { SquareCustomOption } from "../../components/SquareCustomOption/SquareCustomOption";
 import "./GenderPage.scss";
 import { useNavigate } from "react-router-dom";

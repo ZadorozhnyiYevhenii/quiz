@@ -1,12 +1,12 @@
+import { useState } from "react";
+import i18n from "i18next";
+import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { barPercenteges } from "../../utils/barPercentages";
 import { useTranslation } from "react-i18next";
 import { languageOptions } from "../../utils/languageOptions";
-import { useState } from "react";
-import i18n from "i18next";
-import { useNavigate } from "react-router-dom";
 import "./LanguagePage.scss";
 
 export const LanguagePage = () => {
@@ -15,7 +15,6 @@ export const LanguagePage = () => {
   const navigate = useNavigate();
 
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
