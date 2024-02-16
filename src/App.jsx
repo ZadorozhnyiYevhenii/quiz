@@ -1,13 +1,30 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.scss'
-import { ProgressBar } from './components/ProgressBar/ProgressBar'
-import { QuizTitle } from './components/QuizTitle/QuizTitle'
+import { router } from './router'
 
 function App() {
 
   return (
     <>
-      <ProgressBar numberOfQuiz={1} fillPercentage={80} />
-      <QuizTitle title={'dada'} />
+      <Routes>
+
+        {router.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={route.element}
+          />
+        ))}
+
+        {router.map(route => route.children && route.children.map((childRoute, childIndex) => (
+          <Route
+            key={childIndex}
+            path={childRoute.path}
+            element={childRoute.element}
+          />
+        )))}
+
+      </Routes>
     </>
   )
 }

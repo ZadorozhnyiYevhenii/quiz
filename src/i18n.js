@@ -9,10 +9,10 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      en: en,
-      de: de,
-      fr: fr,
-      es: es
+      en: { translation: en },
+      de: { translation: de },
+      fr: { translation: fr },
+      es: { translation: es },
     },
     lng: "en",
     fallbackLng: "en",
@@ -21,3 +21,5 @@ i18n
       escapeValue: false
     }
   });
+
+export default i18n;

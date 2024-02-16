@@ -6,7 +6,7 @@ export const QuizTitle = ({ title, description = '' }) => {
       <h1 className="quiz-title">
         {title}
       </h1>
-      {description && <h3>{description}</h3>}
+      {description && <h3 className='quiz-description'>{description}</h3>}
     </>
   )
 }

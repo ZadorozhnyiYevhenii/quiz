@@ -3,3 +3,7 @@
 .quiz-title {
   @include h1-title
 }
+
+.quiz-description {
+  @include h3-title
+}
