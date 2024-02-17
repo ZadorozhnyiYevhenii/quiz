@@ -8,13 +8,14 @@ html {
 }
 
 body {
-  box-sizing: border-box;
 }
 
 button {
   background-color: $choice-color;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
+
 }
 
 ul {
