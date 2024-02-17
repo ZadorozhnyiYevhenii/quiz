@@ -1,0 +1,17 @@
+@import "../../styleutils/variables.scss";
+
+.next-btn {
+  width: 90%;
+  height: 56px;
+  background-color: $bar-color;
+  color: $main-text-color;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 24px;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 40%;
+  }
+}

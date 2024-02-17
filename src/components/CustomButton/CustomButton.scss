@@ -1,8 +1,15 @@
 @import "../../styleutils/mixins.scss";
+@import "../../styleutils/variables.scss";
 
 .custom-button {
   @include custom-button;
   text-align: left;
   color: #fff;
   padding-left: 20px;
+  transition: all .2s ease-in;
+
+  &.clicked {
+    border: 2px solid $bar-color;
+    background: #460741;
+  }
 }
