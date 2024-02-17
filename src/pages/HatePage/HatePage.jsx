@@ -11,7 +11,10 @@ import "./HatePage.scss";
 export const HatePage = () => {
   const { t } = useTranslation();
 
-  const [selectedOptions, setSelectedOptions] = useLocalStorage("selectedOptions", []);
+  const [selectedOptions, setSelectedOptions] = useLocalStorage(
+    "selectedOptions",
+    []
+  );
 
   const titles = t("hate-page.options", { returnObjects: true });
 
@@ -24,7 +27,7 @@ export const HatePage = () => {
   };
 
   return (
-    <div className="hate">
+    <main className="hate">
       <BackButton />
       <ProgressBar numberOfQuiz={4} fillPercentage={barPercenteges.hatePage} />
       <QuizTitle title={t("hate-page.title")} />
@@ -43,6 +46,6 @@ export const HatePage = () => {
       </ul>
 
       <NextPageButton path={"/quiz/4"} disabled={!selectedOptions.length} />
-    </div>
+    </main>
   );
 };

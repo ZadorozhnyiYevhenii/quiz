@@ -3,6 +3,7 @@ import { GenderPage } from "../pages/GenderPage/GenderPage";
 import { AgePage } from "../pages/AgePage/AgePage";
 import { HatePage } from "../pages/HatePage/HatePage";
 import { TopicsPage } from "../pages/TopicsPage/TopicsPage";
+import { EmailPage } from "../pages/EmailPage/EmailPage";
 
 export const router = [
   {
@@ -24,6 +25,10 @@ export const router = [
       {
         path: '/quiz/4',
         element: <TopicsPage />
+      },
+      {
+        path: '/quiz/email',
+        element: <EmailPage />
       }
     ]
   }

@@ -12,18 +12,19 @@ export const CustomOption = ({
   titleSize,
   storageKey,
 }) => {
-
   const handleClick = () => {
     if (onClick) {
       onClick();
     }
   };
 
-  const selectedOptions = localStorage.getItem(storageKey)
+  const selectedOptions = localStorage.getItem(storageKey);
 
   return (
     <button
-      className={cn("square-btn", { clicked: selectedOptions.includes(option.title) })}
+      className={cn("square-btn", {
+        clicked: selectedOptions.includes(option.title),
+      })}
       type="button"
       onClick={handleClick}
       style={{

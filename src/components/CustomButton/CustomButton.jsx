@@ -1,14 +1,14 @@
-import cn from 'classnames';
+import cn from "classnames";
 import "./CustomButton.scss";
 
-export const CustomButton = ({ 
+export const CustomButton = ({
   title,
   onCLick,
   value,
   height = 60,
-  storageKey = ""
+  storageKey = "",
 }) => {
-  const storeValues = localStorage.getItem(storageKey)
+  const storeValues = localStorage.getItem(storageKey);
 
   return (
     <button

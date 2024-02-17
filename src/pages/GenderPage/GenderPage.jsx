@@ -16,7 +16,7 @@ export const GenderPage = () => {
   };
 
   return (
-    <div className="gender">
+    <main className="gender">
       <ProgressBar
         numberOfQuiz={2}
         fillPercentage={barPercenteges.genderPage}
@@ -34,6 +34,6 @@ export const GenderPage = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };

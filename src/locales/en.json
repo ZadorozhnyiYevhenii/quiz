@@ -32,5 +32,6 @@
       "bad-boy": "Bad boy",
       "billionaire": "Billionaire"
     }
-  }
+  },
+  "loader": "Finding collections for you..."
 }

@@ -18,7 +18,7 @@ export const AgePage = () => {
   const ages = t('age-page.options', { returnObjects: true });
 
   return (
-    <div className="age">
+    <main className="age">
       <BackButton />
       <ProgressBar numberOfQuiz={3} fillPercentage={barPercenteges.agePage} />
       <QuizTitle title={t("age-page.title")} />
@@ -34,6 +34,6 @@ export const AgePage = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };

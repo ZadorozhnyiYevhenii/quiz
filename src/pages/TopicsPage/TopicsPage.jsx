@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
@@ -7,12 +8,18 @@ import { TopicsOptions } from "../../utils/topicsOptions";
 import { CustomOption } from "../../components/CustomOption/CustomOption";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { Loader } from "../../components/Loader/Loader";
 import "./TopicsPage.scss";
 
 export const TopicsPage = () => {
   const { t } = useTranslation();
-  
-  const [selectedTopics, setSelectedTopics] = useLocalStorage("selectedTopics", []);
+
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+
+  const [selectedTopics, setSelectedTopics] = useLocalStorage(
+    "selectedTopics",
+    []
+  );
 
   const handleSelectOption = (option) => {
     if (selectedTopics.includes(option)) {
@@ -22,7 +29,9 @@ export const TopicsPage = () => {
     }
   };
 
-  console.log(localStorage.getItem("selectedTopics"))
+  const handleButtonClick = () => {
+    setIsButtonClicked(true);
+  }
 
   return (
     <div className="topics">
@@ -54,7 +63,9 @@ export const TopicsPage = () => {
         ))}
       </ul>
 
-      <NextPageButton path={"/quiz/email"} disabled={!selectedTopics.length} />
+      {isButtonClicked && <Loader />}
+
+      <NextPageButton disabled={!selectedTopics.length} onClick={handleButtonClick} />
     </div>
   );
 };

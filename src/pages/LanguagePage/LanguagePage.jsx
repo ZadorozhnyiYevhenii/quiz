@@ -23,7 +23,7 @@ export const LanguagePage = () => {
   };
 
   return (
-    <div className="page">
+    <main className="page">
       <ProgressBar
         numberOfQuiz={1}
         fillPercentage={barPercenteges.languagePage}
@@ -44,6 +44,6 @@ export const LanguagePage = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };

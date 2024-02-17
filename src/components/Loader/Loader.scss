@@ -1,0 +1,54 @@
+@import "../../styleutils/variables.scss";
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+
+  &__circle {
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+
+  &__wrap {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: $background-color;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+  }
+
+  &__text {
+    z-index: 5;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 62px;
+  }
+
+  &__description {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+}
