@@ -29,5 +29,9 @@
       "billionaire": "Milliardär"
     }
   },
-  "loader": "Kollektionen für Sie finden..."
+  "loader": "Kollektionen für Sie finden...",
+  "email-page": {
+    "title": "E-mail",
+    "description": "Entrez votre email pour obtenir un accès complet"
+  }
 }

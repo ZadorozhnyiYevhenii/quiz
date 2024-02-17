@@ -33,5 +33,9 @@
       "billionaire": "Billionaire"
     }
   },
-  "loader": "Finding collections for you..."
+  "loader": "Finding collections for you...",
+  "email-page": {
+    "title": "Email",
+    "description": "Enter your email to get full access"
+  }
 }

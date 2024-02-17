@@ -29,6 +29,10 @@
       "billionaire": "Multimillonario"
     }
   },
-  "loader": "Buscando colecciones para ti..."
+  "loader": "Buscando colecciones para ti...",
+  "email-page": {
+    "title": "Correo electrónico",
+    "description": "Ingrese su correo electrónico para obtener acceso completo"
+  }
 }
 
