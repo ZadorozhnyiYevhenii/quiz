@@ -1,0 +1,20 @@
+.topics {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 9px;
+    overflow-x: hidden;
+    padding-block: 30px;
+    place-items: center;
+  }
+
+  &__item {
+    margin-top: 10px;
+    min-height: 105px;
+
+    &:nth-child(odd) {
+      margin-top: -18px;
+      padding-block: 2px;
+    }
+  }
+}

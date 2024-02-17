@@ -15,5 +15,18 @@
   "hate-page": {
     "title": "Was hasst du an einem Buch am meisten?",
     "options": ["Mangel an Logik", "Eine langsame Geschwindigkeit", "Mangel an Humor", "Viel zu allgemeines Ende"]
+  },
+  "topics-page": {
+    "title": "Was sind deine Lieblingsthemen?",
+    "description": "Wählen Sie bis zu 3 Themen aus, die Ihnen gefallen",
+    "options": {
+      "wolf": "Werwolf",
+      "romance": "Romantik",
+      "action": "Aktion",
+      "young-adult": "Junger Erwachsener",
+      "royal-obsession": "Königliche Besessenheit",
+      "bad-boy": "Böser Bub",
+      "billionaire": "Milliardär"
+    }
   }
 }

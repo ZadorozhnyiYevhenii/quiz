@@ -5,8 +5,8 @@ import { barPercenteges } from "../../utils/barPercentages";
 import { CustomRadioButton } from "../../components/CustomRadioButton/CustomRadioButton";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
-import "./HatePage.scss";
 import { useState } from "react";
+import "./HatePage.scss";
 
 export const HatePage = () => {
   const { t } = useTranslation();
@@ -41,9 +41,7 @@ export const HatePage = () => {
         ))}
       </ul>
 
-      <div className="hate__btn">
-        <NextPageButton path={"/quiz/4"} disabled={!selectedOptions.length} />
-      </div>
+      <NextPageButton path={"/quiz/4"} disabled={!selectedOptions.length} />
     </div>
   );
 };

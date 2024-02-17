@@ -5,17 +5,22 @@
   flex-direction: column;
   gap: 6px;
   align-items: center;
+  justify-content: center;
   padding: 25px;
   border-radius: 12px;
   width: 100%;
-  flex: 1;
+  transition: border .2s ease-in;
+  
+  &.clicked {
+    border: 1px solid $bar-color;
+  }
 
   &__emoji {
     font-size: 56px;
-    line-height: 70px;
   }
 
   &__title {
     color: $main-text-color;
+    font-weight: 600;
   }
 }

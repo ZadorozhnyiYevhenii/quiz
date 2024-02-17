@@ -15,5 +15,18 @@
   "hate-page": {
     "title": "Qu’est-ce que tu détestes le plus dans un livre ?",
     "options": ["Manque de logique", "Une vitesse lente", "Manque d'humour", "Fin beaucoup trop générique"]
+  },
+  "topics-page": {
+    "title": "Quels sont vos sujets favoris ?",
+    "description": "Choisissez jusqu'à 3 sujets que vous aimez",
+    "options": {
+      "wolf": "Loup-garou",
+      "romance": "Romance",
+      "action": "Action",
+      "young-adult": "Jeune adulte",
+      "royal-obsession": "Obsession royale",
+      "bad-boy": "Mauvais garçon",
+      "billionaire": "Milliardaire"
+    }
   }
 }

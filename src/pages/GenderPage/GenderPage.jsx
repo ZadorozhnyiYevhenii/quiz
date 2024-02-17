@@ -3,7 +3,7 @@ import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { barPercenteges } from "../../utils/barPercentages";
 import { GenderOptions } from "../../utils/gendersOptions";
-import { SquareCustomOption } from "../../components/SquareCustomOption/SquareCustomOption";
+import { CustomOption } from "../../components/CustomOption/CustomOption";
 import "./GenderPage.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -30,7 +30,7 @@ export const GenderPage = () => {
       <ul className="gender__list">
         {GenderOptions().map((option) => (
           <li key={option.id} className="gender__item">
-            <SquareCustomOption option={option} onClick={handleGender} />
+            <CustomOption option={option} onClick={handleGender} />
           </li>
         ))}
       </ul>

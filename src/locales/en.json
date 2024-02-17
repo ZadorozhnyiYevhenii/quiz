@@ -19,5 +19,18 @@
   "hate-page": {
     "title": "What do you hate the most in a book?",
     "options": ["Lack of logic", "A slow speed", "Lack of humor", "Way too generic ending"]
+  },
+  "topics-page": {
+    "title": "What are your favorite topics?",
+    "description": "Choose up to 3 topics you like",
+    "options": {
+      "wolf": "Werewolf",
+      "romance": "Romance",
+      "action": "Action",
+      "young-adult": "Young adult",
+      "royal-obsession": "Royal obsession",
+      "bad-boy": "Bad boy",
+      "billionaire": "Billionaire"
+    }
   }
 }

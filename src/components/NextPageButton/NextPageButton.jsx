@@ -13,13 +13,15 @@ export const NextPageButton = ({ onClick, path, disabled }) => {
   };
 
   return (
-    <button
-      type="button"
-      className={cn("next-btn", { disabled: disabled })}
-      onClick={handleClick}
-      disabled={disabled}
-    >
-      Next
-    </button>
+    <div className="next-btn">
+      <button
+        type="button"
+        className={cn("next-btn__button", { disabled: disabled })}
+        onClick={handleClick}
+        disabled={disabled}
+      >
+        Next
+      </button>
+    </div>
   );
 };

@@ -15,6 +15,19 @@
   "hate-page": {
     "title": "¿Qué es lo que más odias en un libro?",
     "options": ["Falta de lógica", "Una velocidad lenta", "Falta de humor", "Final demasiado genérico"]
+  },
+  "topics-page": {
+    "title": "¿Cuales son tus temas favoritos?",
+    "description": "Elige hasta 3 temas que te gusten",
+    "options": {
+      "wolf": "Hombre-lobo",
+      "romance": "Romance",
+      "action": "Acción",
+      "young-adult": "Adulta joven",
+      "royal-obsession": "Obsesión real",
+      "bad-boy": "Chico malo",
+      "billionaire": "Multimillonario"
+    }
   }
 }
 
