@@ -6,10 +6,24 @@ import { BackButton } from "../../components/BackButton/BackButton";
 import { TopicsOptions } from "../../utils/topicsOptions";
 import { CustomOption } from "../../components/CustomOption/CustomOption";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import "./TopicsPage.scss";
 
 export const TopicsPage = () => {
   const { t } = useTranslation();
+  
+  const [selectedTopics, setSelectedTopics] = useLocalStorage("selectedTopics", []);
+
+  const handleSelectOption = (option) => {
+    if (selectedTopics.includes(option)) {
+      setSelectedTopics(selectedTopics.filter((item) => item !== option));
+    } else {
+      setSelectedTopics([...selectedTopics, option]);
+    }
+  };
+
+  console.log(localStorage.getItem("selectedTopics"))
+
   return (
     <div className="topics">
       <BackButton />
@@ -33,12 +47,14 @@ export const TopicsPage = () => {
               emojiSize={25}
               titleSize={13}
               paddingBtn={50}
+              onClick={() => handleSelectOption(option.title)}
+              storageKey={"selectedTopics"}
             />
           </li>
         ))}
       </ul>
 
-      <NextPageButton path={"/quiz/email"} />
+      <NextPageButton path={"/quiz/email"} disabled={!selectedTopics.length} />
     </div>
   );
 };

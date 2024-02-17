@@ -5,13 +5,13 @@ import { barPercenteges } from "../../utils/barPercentages";
 import { CustomRadioButton } from "../../components/CustomRadioButton/CustomRadioButton";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
-import { useState } from "react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import "./HatePage.scss";
 
 export const HatePage = () => {
   const { t } = useTranslation();
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useLocalStorage("selectedOptions", []);
 
   const titles = t("hate-page.options", { returnObjects: true });
 
@@ -36,6 +36,7 @@ export const HatePage = () => {
               title={title}
               height={80}
               onClick={() => handleSelectOption(title)}
+              storageKey={"selectedOptions"}
             />
           </li>
         ))}

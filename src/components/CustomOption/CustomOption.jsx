@@ -1,4 +1,3 @@
-import { useState } from "react";
 import cn from "classnames";
 import "./CustomOption.scss";
 
@@ -11,19 +10,20 @@ export const CustomOption = ({
   heightBtn = 144,
   emojiSize = 56,
   titleSize,
+  storageKey,
 }) => {
-  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
-    setIsClicked((prev) => !prev);
     if (onClick) {
       onClick();
     }
   };
 
+  const selectedOptions = localStorage.getItem(storageKey)
+
   return (
     <button
-      className={cn("square-btn", { clicked: isClicked })}
+      className={cn("square-btn", { clicked: selectedOptions.includes(option.title) })}
       type="button"
       onClick={handleClick}
       style={{

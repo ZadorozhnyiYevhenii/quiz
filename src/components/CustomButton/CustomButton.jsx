@@ -6,12 +6,14 @@ export const CustomButton = ({
   onCLick,
   value,
   height = 60,
-  clicked = false
+  storageKey = ""
 }) => {
+  const storeValues = localStorage.getItem(storageKey)
+
   return (
     <button
       type="button"
-      className={cn("custom-button", { clicked: clicked })}
+      className={cn("custom-button", { clicked: storeValues.includes(title) })}
       onClick={onCLick}
       value={value}
       style={{ height: height }}
