@@ -32,6 +32,9 @@
   "loader": "Kollektionen für Sie finden...",
   "email-page": {
     "title": "E-mail",
-    "description": "Entrez votre email pour obtenir un accès complet"
+    "description": "Entrez votre email pour obtenir un accès complet",
+    "placeholder": "Deine E-Mail",
+    "policy": "Indem ich fortfahre, stimme ich den Datenschutzbestimmungen und Nutzungsbedingungen zu.",
+    "not-valid": "Ihre E-Mail ist ungültig!"
   }
 }

@@ -32,6 +32,9 @@
   "loader": "Trouver des collections pour vous...",
   "email-page": {
     "title": "E-mail",
-    "description": "Entrez votre email pour obtenir un accès complet"
+    "description": "Entrez votre email pour obtenir un accès complet",
+    "placeholder": "Votre email",
+    "policy": "En continuant, j'accepte la politique de confidentialité et les conditions d'utilisation.",
+    "not-valid": "Votre email n'est pas valide !"
   }
 }

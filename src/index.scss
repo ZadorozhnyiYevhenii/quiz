@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
 }
 
 button {
@@ -16,6 +17,12 @@ button {
   cursor: pointer;
   box-sizing: border-box;
 
+}
+
+input {
+  outline: none;
+  box-sizing: border-box;
+  border: none;
 }
 
 ul {

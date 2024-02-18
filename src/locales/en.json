@@ -36,6 +36,9 @@
   "loader": "Finding collections for you...",
   "email-page": {
     "title": "Email",
-    "description": "Enter your email to get full access"
+    "description": "Enter your email to get full access",
+    "placeholder": "Your email",
+    "policy": "By continuing I agree with Privacy policy and Terms of use.",
+    "not-valid": "Your email is not valid!"
   }
 }

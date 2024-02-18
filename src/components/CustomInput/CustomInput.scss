@@ -1,0 +1,43 @@
+@import "../../styleutils/variables.scss";
+
+.custom-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: -30px;
+    left: 8%;
+    color: $bar-color;
+  }
+
+  &__input {
+    width: 90%;
+    max-width: 760px;
+    height: 76px;
+    background-color: $choice-color;
+    color: $main-text-color;
+    border-radius: 16px;
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 17px;
+
+    transition: all 0.1s ease-in;
+
+    &:focus {
+      border: 2px solid $input-focus-border-color;
+      background-color: $input-focus-background-color;
+    }
+
+    &::placeholder {
+      color: $second-text-color-low-opacity;
+      font-size: 17px;
+      font-weight: 500;
+      width: 100%;
+    }
+  }
+}

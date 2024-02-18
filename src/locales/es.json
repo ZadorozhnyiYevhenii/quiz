@@ -32,7 +32,10 @@
   "loader": "Buscando colecciones para ti...",
   "email-page": {
     "title": "Correo electrónico",
-    "description": "Ingrese su correo electrónico para obtener acceso completo"
+    "description": "Ingrese su correo electrónico para obtener acceso completo",
+    "placeholder": "Tu correo electrónico",
+    "policy": "Al continuar, acepto la Política de privacidad y los Términos de uso.",
+    "not-valid": "¡Su correo eléctronico no es valido!"
   }
 }
 
