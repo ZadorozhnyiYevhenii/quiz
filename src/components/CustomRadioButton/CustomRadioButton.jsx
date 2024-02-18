@@ -10,9 +10,11 @@ export const CustomRadioButton = ({ title, onClick, height, storageKey }) => {
 
   const selecetedOptions = localStorage.getItem(storageKey)
 
+  const isClicked = selecetedOptions && selecetedOptions.includes(title)
+
   return (
     <div className="radio-btn">
-      <div className={cn("radio-btn__clear", { clicked: selecetedOptions.includes(title) })} />
+      <div className={cn("radio-btn__clear", { clicked: isClicked })} />
       <CustomButton
         title={title}
         onCLick={handleClick}
