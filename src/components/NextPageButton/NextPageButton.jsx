@@ -4,12 +4,12 @@ import "./NextPageButtom.scss";
 
 export const NextPageButton = ({ onClick, path, disabled }) => {
   const navigate = useNavigate();
-
+  
   const handleClick = () => {
     if (onClick) {
       onClick();
     }
-    navigate(path);
+    navigate(path)
   };
 
   return (
@@ -20,7 +20,7 @@ export const NextPageButton = ({ onClick, path, disabled }) => {
         onClick={handleClick}
         disabled={disabled}
       >
-        Next
+          Next
       </button>
     </div>
   );

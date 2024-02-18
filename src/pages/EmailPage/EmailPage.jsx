@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
@@ -19,23 +20,23 @@ export const EmailPage = () => {
   const handleChange = (e) => {
     const { value } = e.target;
     setEmailValue(value);
-
-    if (emailRules.test(value)) {
-      console.log("Okay");
-      setIsEmailValid(true);
-    } else {
-      console.log("Bad");
-    }
   };
 
   const handleNextPage = () => {
     if (emailRules.test(emailValue)) {
       setIsEmailValid(true);
-      navigate("/quiz/download");
     } else {
       setIsEmailValid(false);
     }
   };
+
+  useEffect(() => {
+    if (emailRules.test(emailValue)) {
+      setIsEmailValid(true);
+    } else {
+      setIsEmailValid(false);
+    }
+  }, [emailValue, navigate, setIsEmailValid]);
 
   return (
     <main className="email-page">
@@ -44,7 +45,7 @@ export const EmailPage = () => {
         description={t("email-page.description")}
       />
 
-      <div className="email-page__container">
+      <section className="email-page__container">
         <CustomInput
           value={emailValue}
           onChange={handleChange}
@@ -54,8 +55,11 @@ export const EmailPage = () => {
 
         <p className="email-page__policy">{t("email-page.policy")}</p>
 
-        <NextPageButton onClick={handleNextPage} />
-      </div>
+        <NextPageButton
+          onClick={handleNextPage}
+          path={isEmailValid ? "/quiz/download" : ""}
+        />
+      </section>
     </main>
   );
 };
