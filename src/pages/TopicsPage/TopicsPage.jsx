@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
@@ -13,6 +13,8 @@ import "./TopicsPage.scss";
 
 export const TopicsPage = () => {
   const { t } = useTranslation();
+
+  const [title, setTitle] = useLocalStorage("titles", []);
 
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
@@ -31,7 +33,11 @@ export const TopicsPage = () => {
 
   const handleButtonClick = () => {
     setIsButtonClicked(true);
-  }
+  };
+
+  useEffect(() => {
+    setTitle([...title, t("topics-page.title")]);
+  }, []);
 
   return (
     <div className="topics">
@@ -65,7 +71,10 @@ export const TopicsPage = () => {
 
       {isButtonClicked && <Loader />}
 
-      <NextPageButton disabled={!selectedTopics.length} onClick={handleButtonClick} />
+      <NextPageButton
+        disabled={!selectedTopics.length}
+        onClick={handleButtonClick}
+      />
     </div>
   );
 };

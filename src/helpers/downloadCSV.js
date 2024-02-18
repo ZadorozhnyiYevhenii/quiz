@@ -4,19 +4,28 @@ export const downloadCSV = (data) => {
     return;
   }
 
-  if (data.some(row => !Array.isArray(row))) {
-    console.error("Some items in data are not arrays");
-    return;
-  }
+  const rows = data.map((rowData) => {
+    if (!Array.isArray(rowData) || rowData.length !== 3) {
+      console.error("Invalid data format:", rowData);
+      return "";
+    }
+
+    const [questionIndex, question, value] = rowData;
+
+    const formattedRow = `"${questionIndex}","${question}","${value}"`;
+
+    return formattedRow;
+  });
 
   const csvContent =
-    "data:text/csv;charset=utf-8," +
-    data.map((row) => row.join(",")).join("\n");
+    "data:text/csv;charset=utf-8," + "№,Questions,Answers\n" + rows.join("\n");
+
+  const email = localStorage.getItem("emailValue");
+
   const encodedUri = encodeURI(csvContent);
   const link = document.createElement("a");
   link.setAttribute("href", encodedUri);
-  link.setAttribute("download", "Your-quiz-answers.csv");
+  link.setAttribute("download", `${email}quiz_answers.csv`);
   document.body.appendChild(link);
   link.click();
 };
-

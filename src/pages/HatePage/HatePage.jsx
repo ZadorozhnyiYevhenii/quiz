@@ -7,6 +7,7 @@ import { BackButton } from "../../components/BackButton/BackButton";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import "./HatePage.scss";
+import { useEffect } from "react";
 
 export const HatePage = () => {
   const { t } = useTranslation();
@@ -15,6 +16,12 @@ export const HatePage = () => {
     "selectedOptions",
     []
   );
+
+  const [title, setTitle] = useLocalStorage("titles", []);
+
+  useEffect(() => {
+    setTitle([...title, t("hate-page.title")]);
+  }, []);
 
   const titles = t("hate-page.options", { returnObjects: true });
 

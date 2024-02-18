@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { DownloadComponent } from "../../components/DownloadComponent/DownloadComponent";
-import "./DownLoadPage.scss";
 import { useEffect, useState } from "react";
 import { downloadCSV } from "../../helpers/downloadCSV";
+import "./DownLoadPage.scss";
 
 export const DownLoadPage = () => {
   const { t } = useTranslation();
@@ -12,18 +12,38 @@ export const DownLoadPage = () => {
   const [quizData, setQuizData] = useState([]);
 
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("selectedOptions"));
-    if (storedData) {
-      const formattedData = storedData.map(option => [option]); // Convert each option into an array
-      setQuizData(formattedData);
-    }
+    const keys = [
+      "age",
+      "gender",
+      "language",
+      "selectedOptions",
+      "selectedTopics",
+      "emailValue",
+    ];
+    const allData = keys.reduce((acc, key) => {
+      const storedData = JSON.parse(localStorage.getItem(key));
+      if (storedData) {
+        if (Array.isArray(storedData)) {
+          acc.push(storedData);
+        } else {
+          acc.push(storedData);
+        }
+      }
+      return acc;
+    }, []);
+    setQuizData(allData);
   }, []);
-
-  console.log(quizData)
 
   const handleDownloadClick = () => {
     if (quizData.length > 0) {
-      downloadCSV(quizData);
+      const questions = JSON.parse(localStorage.getItem("titles"));
+
+      const formattedData = quizData.map((value, index) => [
+        index + 1,
+        questions[index],
+        value,
+      ]);
+      downloadCSV(formattedData);
     }
   };
 

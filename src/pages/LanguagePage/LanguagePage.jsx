@@ -1,4 +1,3 @@
-import { useState } from "react";
 import i18n from "i18next";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
@@ -9,13 +8,23 @@ import { useTranslation } from "react-i18next";
 import { languageOptions } from "../../utils/languageOptions";
 import "./LanguagePage.scss";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { useEffect } from "react";
 
 export const LanguagePage = () => {
   const { t } = useTranslation();
 
   const navigate = useNavigate();
 
-  const [currentLanguage, setCurrentLanguage] = useLocalStorage("language", i18n.language);
+  const [title, setTitle] = useLocalStorage("titles", []);
+
+  useEffect(() => {
+    setTitle([...title, t("initial-page.subtitle")]);
+  }, []);
+
+  const [currentLanguage, setCurrentLanguage] = useLocalStorage(
+    "language",
+    i18n.language
+  );
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);

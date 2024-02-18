@@ -7,10 +7,17 @@ import { CustomOption } from "../../components/CustomOption/CustomOption";
 import "./GenderPage.scss";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { useEffect } from "react";
 
 export const GenderPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const [title, setTitle] = useLocalStorage("titles", []);
+
+  useEffect(() => {
+    setTitle([...title, t("gender-page.title")]);
+  }, []);
 
   const [, setGender] = useLocalStorage("gender", "");
 

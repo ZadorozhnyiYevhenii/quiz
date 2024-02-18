@@ -13,6 +13,12 @@ export const EmailPage = () => {
 
   const navigate = useNavigate();
 
+  const [title, setTitle] = useLocalStorage("titles", []);
+
+  useEffect(() => {
+    setTitle([...title, t("email-page.title")]);
+  }, []);
+
   const [emailValue, setEmailValue] = useLocalStorage("emailValue", "");
 
   const [isEmailValid, setIsEmailValid] = useLocalStorage("emailError", false);

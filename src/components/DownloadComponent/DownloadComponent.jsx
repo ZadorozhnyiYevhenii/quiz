@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { DownloadIcon } from "../../assets/DownloadIcon";
 import "./DownloadComponent.scss";
 
-export const DownloadComponent = ({onDownload}) => {
+export const DownloadComponent = ({ onDownload }) => {
   const { t } = useTranslation();
 
   return (

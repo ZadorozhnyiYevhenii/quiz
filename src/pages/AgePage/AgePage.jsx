@@ -5,21 +5,26 @@ import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { barPercenteges } from "../../utils/barPercentages";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
-import "./AgePage.scss";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import "./AgePage.scss";
 
 export const AgePage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const [title, setTitle] = useLocalStorage("titles", []);
+
   const [, setAge] = useLocalStorage("age", "");
 
   const handleAge = (value) => {
     setAge(value);
+    setTitle([...title, t("age-page.title")])
     navigate("/quiz/3");
   };
 
   const ages = t("age-page.options", { returnObjects: true });
+
+  console.log(title)
 
   return (
     <main className="age">
