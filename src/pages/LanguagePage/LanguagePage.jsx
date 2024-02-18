@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import i18n from "i18next";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
@@ -6,23 +7,23 @@ import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
 import { barPercenteges } from "../../utils/barPercentages";
 import { useTranslation } from "react-i18next";
 import { languageOptions } from "../../utils/languageOptions";
-import "./LanguagePage.scss";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
-import { useEffect } from "react";
+import { answerKey, titlesKey } from "../../utils/localstorageKeys";
+import "./LanguagePage.scss";
 
 export const LanguagePage = () => {
   const { t } = useTranslation();
 
   const navigate = useNavigate();
 
-  const [title, setTitle] = useLocalStorage("titles", []);
+  const [title, setTitle] = useLocalStorage(titlesKey, []);
 
   useEffect(() => {
     setTitle([...title, t("initial-page.subtitle")]);
   }, []);
 
   const [currentLanguage, setCurrentLanguage] = useLocalStorage(
-    "language",
+    answerKey.language,
     i18n.language
   );
 

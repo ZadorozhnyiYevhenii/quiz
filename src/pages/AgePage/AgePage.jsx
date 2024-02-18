@@ -6,15 +6,16 @@ import { barPercenteges } from "../../utils/barPercentages";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./AgePage.scss";
 
 export const AgePage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const [title, setTitle] = useLocalStorage("titles", []);
+  const [title, setTitle] = useLocalStorage(titlesKey, []);
 
-  const [, setAge] = useLocalStorage("age", "");
+  const [, setAge] = useLocalStorage(answerKey.age, "");
 
   const handleAge = (value) => {
     setAge(value);

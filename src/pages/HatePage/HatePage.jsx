@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
 import { QuizTitle } from "../../components/QuizTitle/QuizTitle";
@@ -6,18 +7,18 @@ import { CustomRadioButton } from "../../components/CustomRadioButton/CustomRadi
 import { BackButton } from "../../components/BackButton/BackButton";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./HatePage.scss";
-import { useEffect } from "react";
 
 export const HatePage = () => {
   const { t } = useTranslation();
 
   const [selectedOptions, setSelectedOptions] = useLocalStorage(
-    "selectedOptions",
+    answerKey.hate,
     []
   );
 
-  const [title, setTitle] = useLocalStorage("titles", []);
+  const [title, setTitle] = useLocalStorage(titlesKey, []);
 
   useEffect(() => {
     setTitle([...title, t("hate-page.title")]);

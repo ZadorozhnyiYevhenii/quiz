@@ -5,6 +5,7 @@ import { DownloadComponent } from "../../components/DownloadComponent/DownloadCo
 import { useEffect, useState } from "react";
 import { downloadCSV } from "../../helpers/downloadCSV";
 import "./DownLoadPage.scss";
+import { answerKeyArray, titlesKey } from "../../utils/localstorageKeys";
 
 export const DownLoadPage = () => {
   const { t } = useTranslation();
@@ -12,15 +13,7 @@ export const DownLoadPage = () => {
   const [quizData, setQuizData] = useState([]);
 
   useEffect(() => {
-    const keys = [
-      "age",
-      "gender",
-      "language",
-      "selectedOptions",
-      "selectedTopics",
-      "emailValue",
-    ];
-    const allData = keys.reduce((acc, key) => {
+    const allData = answerKeyArray.reduce((acc, key) => {
       const storedData = JSON.parse(localStorage.getItem(key));
       if (storedData) {
         if (Array.isArray(storedData)) {
@@ -36,7 +29,7 @@ export const DownLoadPage = () => {
 
   const handleDownloadClick = () => {
     if (quizData.length > 0) {
-      const questions = JSON.parse(localStorage.getItem("titles"));
+      const questions = JSON.parse(localStorage.getItem(titlesKey));
 
       const formattedData = quizData.map((value, index) => [
         index + 1,
@@ -50,6 +43,8 @@ export const DownLoadPage = () => {
   const handleRetakeClick = () => {
     localStorage.clear();
   };
+
+  console.log(answerKeyArray)
 
   return (
     <main className="download-page">

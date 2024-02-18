@@ -6,6 +6,7 @@ import { CustomInput } from "../../components/CustomInput/CustomInput";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { emailRules } from "../../utils/emailRules";
+import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./EmailPage.scss";
 
 export const EmailPage = () => {
@@ -13,13 +14,13 @@ export const EmailPage = () => {
 
   const navigate = useNavigate();
 
-  const [title, setTitle] = useLocalStorage("titles", []);
+  const [title, setTitle] = useLocalStorage(titlesKey, []);
 
   useEffect(() => {
     setTitle([...title, t("email-page.title")]);
   }, []);
 
-  const [emailValue, setEmailValue] = useLocalStorage("emailValue", "");
+  const [emailValue, setEmailValue] = useLocalStorage(answerKey.email, "");
 
   const [isEmailValid, setIsEmailValid] = useLocalStorage("emailError", false);
 

@@ -9,17 +9,18 @@ import { CustomOption } from "../../components/CustomOption/CustomOption";
 import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { Loader } from "../../components/Loader/Loader";
+import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./TopicsPage.scss";
 
 export const TopicsPage = () => {
   const { t } = useTranslation();
 
-  const [title, setTitle] = useLocalStorage("titles", []);
+  const [title, setTitle] = useLocalStorage(titlesKey, []);
 
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   const [selectedTopics, setSelectedTopics] = useLocalStorage(
-    "selectedTopics",
+    answerKey.topics,
     []
   );
 
