@@ -2,11 +2,11 @@ import { useTranslation } from "react-i18next";
 import { DownloadIcon } from "../../assets/DownloadIcon";
 import "./DownloadComponent.scss";
 
-export const DownloadComponent = () => {
+export const DownloadComponent = ({onDownload}) => {
   const { t } = useTranslation();
 
   return (
-    <button className="download-btn">
+    <button className="download-btn" onClick={onDownload}>
       <span>
         <DownloadIcon />
       </span>

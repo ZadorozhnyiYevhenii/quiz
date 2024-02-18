@@ -8,13 +8,14 @@ import { barPercenteges } from "../../utils/barPercentages";
 import { useTranslation } from "react-i18next";
 import { languageOptions } from "../../utils/languageOptions";
 import "./LanguagePage.scss";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export const LanguagePage = () => {
   const { t } = useTranslation();
 
   const navigate = useNavigate();
 
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  const [currentLanguage, setCurrentLanguage] = useLocalStorage("language", i18n.language);
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);

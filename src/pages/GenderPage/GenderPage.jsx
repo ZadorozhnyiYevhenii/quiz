@@ -6,12 +6,16 @@ import { GenderOptions } from "../../utils/gendersOptions";
 import { CustomOption } from "../../components/CustomOption/CustomOption";
 import "./GenderPage.scss";
 import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export const GenderPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const handleGender = () => {
+  const [, setGender] = useLocalStorage("gender", "");
+
+  const handleGender = (value) => {
+    setGender(value);
     navigate("/quiz/2");
   };
 
@@ -30,7 +34,10 @@ export const GenderPage = () => {
       <ul className="gender__list">
         {GenderOptions().map((option) => (
           <li key={option.id} className="gender__item">
-            <CustomOption option={option} onClick={handleGender} />
+            <CustomOption
+              option={option}
+              onClick={() => handleGender(option.title)}
+            />
           </li>
         ))}
       </ul>

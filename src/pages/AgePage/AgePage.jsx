@@ -6,16 +6,20 @@ import { barPercenteges } from "../../utils/barPercentages";
 import { BackButton } from "../../components/BackButton/BackButton";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
 import "./AgePage.scss";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export const AgePage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const handleAge = () => {
+  const [, setAge] = useLocalStorage("age", "");
+
+  const handleAge = (value) => {
+    setAge(value);
     navigate("/quiz/3");
   };
 
-  const ages = t('age-page.options', { returnObjects: true });
+  const ages = t("age-page.options", { returnObjects: true });
 
   return (
     <main className="age">
@@ -29,7 +33,7 @@ export const AgePage = () => {
             <CustomButton
               title={option}
               height={76}
-              onCLick={handleAge}
+              onCLick={() => handleAge(option)}
             />
           </li>
         ))}
