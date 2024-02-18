@@ -8,7 +8,7 @@ export const CustomInput = ({
 }) => {
   return (
     <div className="custom-input">
-      <label className="custom-input__label">{error ? erorrMessage : ""}</label>
+      <label className="custom-input__label">{error && value.length !== 0 ? erorrMessage : ""}</label>
       <input
         type="text"
         placeholder="Your email"

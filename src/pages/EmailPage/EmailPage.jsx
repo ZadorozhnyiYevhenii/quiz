@@ -15,26 +15,18 @@ export const EmailPage = () => {
 
   const [emailValue, setEmailValue] = useLocalStorage("emailValue", "");
 
-  const [isEmailValid, setIsEmailValid] = useLocalStorage("emailError", true);
+  const [isEmailValid, setIsEmailValid] = useLocalStorage("emailError", false);
 
   const handleChange = (e) => {
     const { value } = e.target;
     setEmailValue(value);
   };
 
-  const handleNextPage = () => {
-    if (emailRules.test(emailValue)) {
-      setIsEmailValid(true);
-    } else {
-      setIsEmailValid(false);
-    }
-  };
-
   useEffect(() => {
-    if (emailRules.test(emailValue)) {
-      setIsEmailValid(true);
-    } else {
+    if (emailRules.test(emailValue) && emailValue.length > 0) {
       setIsEmailValid(false);
+    } else {
+      setIsEmailValid(true);
     }
   }, [emailValue, navigate, setIsEmailValid]);
 
@@ -49,15 +41,15 @@ export const EmailPage = () => {
         <CustomInput
           value={emailValue}
           onChange={handleChange}
-          error={!isEmailValid}
+          error={isEmailValid}
           erorrMessage={t("email-page.not-valid")}
         />
 
         <p className="email-page__policy">{t("email-page.policy")}</p>
 
         <NextPageButton
-          onClick={handleNextPage}
-          path={isEmailValid ? "/quiz/download" : ""}
+          path={!isEmailValid ? "/quiz/download" : ""}
+          disabled={isEmailValid}
         />
       </section>
     </main>
