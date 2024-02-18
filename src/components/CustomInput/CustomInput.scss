@@ -7,17 +7,18 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 1024px;
 
   &__label {
     position: absolute;
     top: -30px;
-    left: 8%;
+    left: 6%;
     color: $bar-color;
   }
 
   &__input {
     width: 90%;
-    max-width: 760px;
+    
     height: 76px;
     background-color: $choice-color;
     color: $main-text-color;
@@ -26,7 +27,7 @@
     font-weight: 500;
     font-size: 17px;
 
-    transition: all 0.1s ease-in;
+    transition: all 0.2s ease-in;
 
     &:focus {
       border: 2px solid $input-focus-border-color;

@@ -53,7 +53,11 @@ export const HatePage = () => {
         ))}
       </ul>
 
-      <NextPageButton path={"/quiz/4"} disabled={!selectedOptions.length} />
+      <NextPageButton
+        path={"/quiz/4"}
+        disabled={!selectedOptions.length}
+        title={t("next-page-btn")}
+      />
     </main>
   );
 };

@@ -57,6 +57,7 @@ export const EmailPage = () => {
         <NextPageButton
           path={!isEmailValid ? "/quiz/download" : ""}
           disabled={isEmailValid}
+          title={t("next-page-btn")}
         />
       </section>
     </main>

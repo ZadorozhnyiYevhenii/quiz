@@ -4,8 +4,8 @@ import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { DownloadComponent } from "../../components/DownloadComponent/DownloadComponent";
 import { useEffect, useState } from "react";
 import { downloadCSV } from "../../helpers/downloadCSV";
-import "./DownLoadPage.scss";
 import { answerKeyArray, titlesKey } from "../../utils/localstorageKeys";
+import "./DownLoadPage.scss";
 
 export const DownLoadPage = () => {
   const { t } = useTranslation();
@@ -16,11 +16,7 @@ export const DownLoadPage = () => {
     const allData = answerKeyArray.reduce((acc, key) => {
       const storedData = JSON.parse(localStorage.getItem(key));
       if (storedData) {
-        if (Array.isArray(storedData)) {
-          acc.push(storedData);
-        } else {
-          acc.push(storedData);
-        }
+        acc.push(storedData);
       }
       return acc;
     }, []);
@@ -31,9 +27,11 @@ export const DownLoadPage = () => {
     if (quizData.length > 0) {
       const questions = JSON.parse(localStorage.getItem(titlesKey));
 
+      const uniqueQuestions = [...new Set(questions)];
+
       const formattedData = quizData.map((value, index) => [
         index + 1,
-        questions[index],
+        uniqueQuestions[index],
         value,
       ]);
       downloadCSV(formattedData);
@@ -43,8 +41,6 @@ export const DownLoadPage = () => {
   const handleRetakeClick = () => {
     localStorage.clear();
   };
-
-  console.log(answerKeyArray)
 
   return (
     <main className="download-page">
@@ -61,7 +57,7 @@ export const DownLoadPage = () => {
       <DownloadComponent onDownload={handleDownloadClick} />
 
       <NextPageButton
-        title="Retake quiz"
+        title={t('download-page.button')}
         onClick={handleRetakeClick}
         path={"/quiz"}
       />

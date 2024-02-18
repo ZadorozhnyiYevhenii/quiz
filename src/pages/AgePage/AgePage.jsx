@@ -25,8 +25,6 @@ export const AgePage = () => {
 
   const ages = t("age-page.options", { returnObjects: true });
 
-  console.log(title)
-
   return (
     <main className="age">
       <BackButton />

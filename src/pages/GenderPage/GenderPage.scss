@@ -1,12 +1,17 @@
 .gender {
   &__list {
     display: flex;
-    gap: 12px;
+    gap: 2em;
     justify-content: center;
     flex-wrap: wrap;
+    height: 30vh;
+    margin-top: 10%;
   }
   
   &__item {
-    flex: 0 0 calc(30% - 10px);
+    // flex: 0 0 calc(30% - 1px);
+    width: 28%;
+    height: 100%;
+    max-width: 330px;
   }
 }

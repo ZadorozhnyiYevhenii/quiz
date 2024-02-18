@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import i18n from "i18next";
+import i18next from "i18next";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
@@ -12,7 +12,7 @@ import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./LanguagePage.scss";
 
 export const LanguagePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ export const LanguagePage = () => {
   );
 
   const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
+    i18next.changeLanguage(language);
     setCurrentLanguage(language);
     navigate("/quiz/1");
   };

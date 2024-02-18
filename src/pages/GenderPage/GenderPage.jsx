@@ -11,7 +11,7 @@ import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./GenderPage.scss";
 
 export const GenderPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n} = useTranslation();
   const navigate = useNavigate();
 
   const [title, setTitle] = useLocalStorage(titlesKey, []);
@@ -26,6 +26,8 @@ export const GenderPage = () => {
     setGender(value);
     navigate("/quiz/2");
   };
+
+  console.log(i18n.languages)
 
   return (
     <main className="gender">

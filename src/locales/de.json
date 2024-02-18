@@ -1,4 +1,8 @@
 {
+  "initial-page": {
+    "title": "Was ist Ihre bevorzugte Sprache?",
+    "subtitle": "Sprache wählen"
+  },
   "gender-page": {
     "title": "Mit welchem Geschlecht identifizierst du dich?",
     "subtitle": "Bitte teilen Sie uns mit, wie Sie sich identifizieren",
@@ -40,6 +44,7 @@
   "download-page": {
     "title": "Danke",
     "description": "für deine Unterstützung und das bestandene Quiz",
-    "download-answers": "Laden Sie meine Antworten herunter"
+    "download-answers": "Laden Sie meine Antworten herunter",
+    "button": "Wiederholen Sie das Quiz"
   }
 }

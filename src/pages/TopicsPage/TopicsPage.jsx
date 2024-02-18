@@ -75,6 +75,7 @@ export const TopicsPage = () => {
       <NextPageButton
         disabled={!selectedTopics.length}
         onClick={handleButtonClick}
+        title={t("next-page-btn")}
       />
     </div>
   );

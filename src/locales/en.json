@@ -44,6 +44,8 @@
   "download-page": {
     "title": "Thank you",
     "description": "for supporting us and passing quiz",
-    "download-answers": "Download my answers"
-  }
+    "download-answers": "Download my answers",
+    "button": "Retake quiz"
+  },
+  "next-page-btn": "Next"
 }

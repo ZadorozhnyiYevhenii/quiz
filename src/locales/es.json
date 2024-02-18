@@ -1,4 +1,8 @@
 {
+  "initial-page": {
+    "title": "¿Cuál es tu idioma preferido?",
+    "subtitle": "Elige lengua"
+  },
   "gender-page": {
     "title": "Por favor comparte como te identificas",
     "subtitle": "Por favor comparte como te identificas",
@@ -40,7 +44,8 @@
   "download-page": {
     "title": "Gracias",
     "description": "por apoyarnos y aprobar el cuestionario",
-    "download-answers": "Descarga mis respuestas"
+    "download-answers": "Descarga mis respuestas",
+    "button": "Volver a hacer el cuestionario"
   }
 }
 
