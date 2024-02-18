@@ -40,5 +40,10 @@
     "placeholder": "Your email",
     "policy": "By continuing I agree with Privacy policy and Terms of use.",
     "not-valid": "Your email is not valid!"
+  },
+  "download-page": {
+    "title": "Thank you",
+    "description": "for supporting us and passing quiz",
+    "download-answers": "Download my answers"
   }
 }

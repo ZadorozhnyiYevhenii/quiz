@@ -36,6 +36,11 @@
     "placeholder": "Tu correo electrónico",
     "policy": "Al continuar, acepto la Política de privacidad y los Términos de uso.",
     "not-valid": "¡Su correo eléctronico no es valido!"
+  },
+  "download-page": {
+    "title": "Gracias",
+    "description": "por apoyarnos y aprobar el cuestionario",
+    "download-answers": "Descarga mis respuestas"
   }
 }
 

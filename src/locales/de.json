@@ -36,5 +36,10 @@
     "placeholder": "Deine E-Mail",
     "policy": "Indem ich fortfahre, stimme ich den Datenschutzbestimmungen und Nutzungsbedingungen zu.",
     "not-valid": "Ihre E-Mail ist ungültig!"
+  },
+  "download-page": {
+    "title": "Danke",
+    "description": "für deine Unterstützung und das bestandene Quiz",
+    "download-answers": "Laden Sie meine Antworten herunter"
   }
 }

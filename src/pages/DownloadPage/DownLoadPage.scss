@@ -1,0 +1,19 @@
+.download-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__header {
+    margin-top: 15%;
+  }
+
+  &__image {
+    background-image: url(../../assets/success-img.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 118px;
+    width: 118px;
+    background-size: 118px 118px
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../styleutils/variables.scss";
+
+.download-btn {
+  background: none;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  position: absolute;
+  bottom: 18%;
+
+  &__label {
+    color: $main-text-color;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+}

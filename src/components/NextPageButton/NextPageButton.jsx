@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import cn from "classnames";
-import "./NextPageButtom.scss";
+import "./NextPageButton.scss";
 
-export const NextPageButton = ({ onClick, path, disabled }) => {
+export const NextPageButton = ({ onClick, path, disabled, title = 'Next' }) => {
   const navigate = useNavigate();
   
   const handleClick = () => {
@@ -20,7 +20,7 @@ export const NextPageButton = ({ onClick, path, disabled }) => {
         onClick={handleClick}
         disabled={disabled}
       >
-          Next
+          {title}
       </button>
     </div>
   );
