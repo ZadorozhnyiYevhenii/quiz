@@ -10,6 +10,7 @@ import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { Loader } from "../../components/Loader/Loader";
 import { answerKey, titlesKey } from "../../utils/localstorageKeys";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 import "./TopicsPage.scss";
 
 export const TopicsPage = () => {
@@ -44,33 +45,35 @@ export const TopicsPage = () => {
 
   return (
     <div className="topics">
-      <BackButton />
-      <ProgressBar
-        numberOfQuiz={5}
-        fillPercentage={barPercenteges.topicsPage}
-      />
-      <QuizTitle
-        title={t("topics-page.title")}
-        description={t("topics-page.description")}
-      />
+      <AnimatedPageWrapper>
+        <BackButton />
+        <ProgressBar
+          numberOfQuiz={5}
+          fillPercentage={barPercenteges.topicsPage}
+        />
+        <QuizTitle
+          title={t("topics-page.title")}
+          description={t("topics-page.description")}
+        />
 
-      <ul className="topics__list">
-        {topicsArray.map((option) => (
-          <li key={option.id} className="topics__item topics__item--odd">
-            <CustomOption
-              option={option}
-              heightBtn={88}
-              widthBtn={88}
-              radius={50}
-              emojiSize={25}
-              titleSize={13}
-              paddingBtn={50}
-              onClick={() => handleSelectOption(option.title)}
-              storageKey={"selectedTopics"}
-            />
-          </li>
-        ))}
-      </ul>
+        <ul className="topics__list">
+          {topicsArray.map((option) => (
+            <li key={option.id} className="topics__item topics__item--odd">
+              <CustomOption
+                option={option}
+                heightBtn={50}
+                widthBtn={50}
+                radius={50}
+                emojiSize={25}
+                titleSize={13}
+                paddingBtn={50}
+                onClick={() => handleSelectOption(option.title)}
+                storageKey={"selectedTopics"}
+              />
+            </li>
+          ))}
+        </ul>
+      </AnimatedPageWrapper>
 
       {isButtonClicked && <Loader />}
 

@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { languageOptions } from "../../utils/languageOptions";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { answerKey, titlesKey } from "../../utils/localstorageKeys";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 import "./LanguagePage.scss";
 
 export const LanguagePage = () => {
@@ -24,7 +25,7 @@ export const LanguagePage = () => {
 
   const [currentLanguage, setCurrentLanguage] = useLocalStorage(
     answerKey.language,
-    i18n.language
+    i18n.language || 'en'
   );
 
   const changeLanguage = (language) => {
@@ -34,7 +35,8 @@ export const LanguagePage = () => {
   };
 
   return (
-    <main className="page">
+    <AnimatedPageWrapper>
+      <main className="page">
       <ProgressBar
         numberOfQuiz={1}
         fillPercentage={barPercenteges.languagePage}
@@ -56,5 +58,6 @@ export const LanguagePage = () => {
         ))}
       </ul>
     </main>
+    </AnimatedPageWrapper>
   );
 };

@@ -2,10 +2,10 @@
 
 .radio-btn {
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   &__clear {
     position: absolute;

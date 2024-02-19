@@ -11,7 +11,8 @@
   width: 100%;
   transition: border .2s ease-in;
   height: 100%;
-  
+  max-width: 1440px;
+
   &.clicked {
     border: 1px solid $bar-color;
   }

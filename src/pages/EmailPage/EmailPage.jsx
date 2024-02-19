@@ -8,6 +8,7 @@ import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { emailRules } from "../../utils/emailRules";
 import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./EmailPage.scss";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 
 export const EmailPage = () => {
   const { t } = useTranslation();
@@ -43,23 +44,23 @@ export const EmailPage = () => {
         title={t("email-page.title")}
         description={t("email-page.description")}
       />
+      <AnimatedPageWrapper>
+        <section className="email-page__container">
+          <CustomInput
+            value={emailValue}
+            onChange={handleChange}
+            error={isEmailValid}
+            erorrMessage={t("email-page.not-valid")}
+          />
 
-      <section className="email-page__container">
-        <CustomInput
-          value={emailValue}
-          onChange={handleChange}
-          error={isEmailValid}
-          erorrMessage={t("email-page.not-valid")}
-        />
-
-        <p className="email-page__policy">{t("email-page.policy")}</p>
-
-        <NextPageButton
-          path={!isEmailValid ? "/quiz/download" : ""}
-          disabled={isEmailValid}
-          title={t("next-page-btn")}
-        />
-      </section>
+          <p className="email-page__policy">{t("email-page.policy")}</p>
+        </section>
+      </AnimatedPageWrapper>
+      <NextPageButton
+        path={!isEmailValid ? "/quiz/download" : ""}
+        disabled={isEmailValid}
+        title={t("next-page-btn")}
+      />
     </main>
   );
 };

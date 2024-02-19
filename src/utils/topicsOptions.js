@@ -8,8 +8,8 @@ export const TopicsOptions = () => {
 
   let topicsArray;
 
-  switch (ageValue.slice(0, 6)) {
-    case '18-29':
+  switch (ageValue.slice(0, 2)) {
+    case '18':
       topicsArray = [
         { id: 1, title: t("topics-page.options-18-29.fantasy"), emoji: "😱" },
         { id: 2, title: t("topics-page.options-18-29.science-fiction"), emoji: "🧬" },
@@ -20,7 +20,7 @@ export const TopicsOptions = () => {
         { id: 7, title: t("topics-page.options-18-29.nonfiction"), emoji: "👀" },
       ];
       break;
-    case '30-39':
+    case '30':
       topicsArray = [
         { id: 1, title: t("topics-page.options-30-39.literary-fiction"), emoji: "📓" },
         { id: 2, title: t("topics-page.options-30-39.historical-fiction"), emoji: "📜" },
@@ -31,7 +31,7 @@ export const TopicsOptions = () => {
         { id: 7, title: t("topics-page.options-30-39.travel"), emoji: "🧳" },
       ];
       break;
-    case '40-49':
+    case '40':
       topicsArray = [
         { id: 1, title: t("topics-page.options-40-49.thriller"), emoji: "🔦" },
         { id: 2, title: t("topics-page.options-40-49.royal-obsession"), emoji: "👑" },
@@ -42,7 +42,7 @@ export const TopicsOptions = () => {
         { id: 7, title: t("topics-page.options-40-49.auto-biography"), emoji: "📗" },
       ];
       break;
-    case '50+':
+    case '50':
       topicsArray = [
         { id: 1, title: t("topics-page.options-50+.contemporary-fiction"), emoji: "👁️‍🗨️" },
         { id: 2, title: t("topics-page.options-50+.wolf"), emoji: "🐺" },

@@ -8,6 +8,7 @@ import { CustomButton } from "../../components/CustomButton/CustomButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./AgePage.scss";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 
 export const AgePage = () => {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ export const AgePage = () => {
 
   const handleAge = (value) => {
     setAge(value);
-    setTitle([...title, t("age-page.title")])
+    setTitle([...title, t("age-page.title")]);
     navigate("/quiz/3");
   };
 
@@ -27,21 +28,25 @@ export const AgePage = () => {
 
   return (
     <main className="age">
-      <BackButton />
-      <ProgressBar numberOfQuiz={3} fillPercentage={barPercenteges.agePage} />
-      <QuizTitle title={t("age-page.title")} />
+      <AnimatedPageWrapper>
+        <div className="age__header">
+        <BackButton />
+        </div>
+        <ProgressBar numberOfQuiz={3} fillPercentage={barPercenteges.agePage} />
+        <QuizTitle title={t("age-page.title")} />
 
-      <ul className="age__list">
-        {ages.map((option, index) => (
-          <li className="age__item" key={index}>
-            <CustomButton
-              title={option}
-              height={76}
-              onCLick={() => handleAge(option)}
-            />
-          </li>
-        ))}
-      </ul>
+        <ul className="age__list">
+          {ages.map((option, index) => (
+            <li className="age__item" key={index}>
+              <CustomButton
+                title={option}
+                height={76}
+                onCLick={() => handleAge(option)}
+              />
+            </li>
+          ))}
+        </ul>
+      </AnimatedPageWrapper>
     </main>
   );
 };

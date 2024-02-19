@@ -21,3 +21,10 @@
   font-weight: 600;
   line-height: 24px;
 }
+
+@mixin main-positioning {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

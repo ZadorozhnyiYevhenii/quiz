@@ -1,4 +1,12 @@
 .age {
+  position: relative;
+
+  &__header {
+    position: absolute;
+    top: -2em;
+    left: 4.5%;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

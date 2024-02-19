@@ -8,10 +8,11 @@ import { CustomOption } from "../../components/CustomOption/CustomOption";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { answerKey, titlesKey } from "../../utils/localstorageKeys";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 import "./GenderPage.scss";
 
 export const GenderPage = () => {
-  const { t, i18n} = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const [title, setTitle] = useLocalStorage(titlesKey, []);
@@ -27,30 +28,30 @@ export const GenderPage = () => {
     navigate("/quiz/2");
   };
 
-  console.log(i18n.languages)
-
   return (
     <main className="gender">
-      <ProgressBar
-        numberOfQuiz={2}
-        fillPercentage={barPercenteges.genderPage}
-      />
+      <AnimatedPageWrapper>
+        <ProgressBar
+          numberOfQuiz={2}
+          fillPercentage={barPercenteges.genderPage}
+        />
 
-      <QuizTitle
-        title={t("gender-page.title")}
-        description={t("gender-page.subtitle")}
-      />
+        <QuizTitle
+          title={t("gender-page.title")}
+          description={t("gender-page.subtitle")}
+        />
 
-      <ul className="gender__list">
-        {GenderOptions().map((option) => (
-          <li key={option.id} className="gender__item">
-            <CustomOption
-              option={option}
-              onClick={() => handleGender(option.title)}
-            />
-          </li>
-        ))}
-      </ul>
+        <ul className="gender__list">
+          {GenderOptions().map((option) => (
+            <li key={option.id} className="gender__item">
+              <CustomOption
+                option={option}
+                onClick={() => handleGender(option.title)}
+              />
+            </li>
+          ))}
+        </ul>
+      </AnimatedPageWrapper>
     </main>
   );
 };

@@ -5,6 +5,7 @@ import { DownloadComponent } from "../../components/DownloadComponent/DownloadCo
 import { useEffect, useState } from "react";
 import { downloadCSV } from "../../helpers/downloadCSV";
 import { answerKeyArray, titlesKey } from "../../utils/localstorageKeys";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 import "./DownLoadPage.scss";
 
 export const DownLoadPage = () => {
@@ -44,20 +45,22 @@ export const DownLoadPage = () => {
 
   return (
     <main className="download-page">
-      <section className="download-page__header">
-        <QuizTitle
-          title={t("download-page.title")}
-          description={t("download-page.description")}
-          color={"#fff"}
-        />
-      </section>
+      <AnimatedPageWrapper>
+        <header className="download-page__header">
+          <QuizTitle
+            title={t("download-page.title")}
+            description={t("download-page.description")}
+            color={"#fff"}
+          />
+        </header>
 
-      <div className="download-page__image" />
-
+        <section className="download-page__content">
+          <div className="download-page__image" />
+        </section>
+      </AnimatedPageWrapper>
       <DownloadComponent onDownload={handleDownloadClick} />
-
       <NextPageButton
-        title={t('download-page.button')}
+        title={t("download-page.button")}
         onClick={handleRetakeClick}
         path={"/quiz"}
       />

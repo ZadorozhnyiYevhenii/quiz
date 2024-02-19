@@ -9,6 +9,7 @@ import { NextPageButton } from "../../components/NextPageButton/NextPageButton";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { answerKey, titlesKey } from "../../utils/localstorageKeys";
 import "./HatePage.scss";
+import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 
 export const HatePage = () => {
   const { t } = useTranslation();
@@ -36,23 +37,27 @@ export const HatePage = () => {
 
   return (
     <main className="hate">
-      <BackButton />
-      <ProgressBar numberOfQuiz={4} fillPercentage={barPercenteges.hatePage} />
-      <QuizTitle title={t("hate-page.title")} />
+      <AnimatedPageWrapper>
+        <BackButton />
+        <ProgressBar
+          numberOfQuiz={4}
+          fillPercentage={barPercenteges.hatePage}
+        />
+        <QuizTitle title={t("hate-page.title")} />
 
-      <ul className="hate__list">
-        {titles.map((title, index) => (
-          <li key={index} className="hate__item">
-            <CustomRadioButton
-              title={title}
-              height={80}
-              onClick={() => handleSelectOption(title)}
-              storageKey={"selectedOptions"}
-            />
-          </li>
-        ))}
-      </ul>
-
+        <ul className="hate__list">
+          {titles.map((title, index) => (
+            <li key={index} className="hate__item">
+              <CustomRadioButton
+                title={title}
+                height={80}
+                onClick={() => handleSelectOption(title)}
+                storageKey={"selectedOptions"}
+              />
+            </li>
+          ))}
+        </ul>
+      </AnimatedPageWrapper>
       <NextPageButton
         path={"/quiz/4"}
         disabled={!selectedOptions.length}

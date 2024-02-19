@@ -33,7 +33,7 @@ export const CustomOption = ({
         borderRadius: `${radius}%`,
         height: heightBtn,
         width: widthBtn,
-        padding: paddingBtn,
+        padding: `${paddingBtn}%`,
       }}
     >
       <div className="square-btn__emoji" style={{ fontSize: emojiSize }}>

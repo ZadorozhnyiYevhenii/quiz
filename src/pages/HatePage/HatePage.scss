@@ -1,8 +1,19 @@
+@import "../../styleutils/mixins.scss";
+
 .hate {
+  @include main-positioning;
+
   &__list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 12px;
     overflow: auto;
+    align-items: center;
+  }
+
+  &__item {
+    width: 100%;
+
   }
 }

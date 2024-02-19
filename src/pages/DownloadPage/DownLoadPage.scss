@@ -4,8 +4,16 @@
   align-items: center;
   justify-content: center;
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__header {
-    margin-top: 10rem;
+    margin-top: 10%;
+
   }
 
   &__image {
@@ -15,6 +23,6 @@
     height: 118px;
     width: 118px;
     background-size: 118px 118px;
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 }
