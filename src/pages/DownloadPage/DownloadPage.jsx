@@ -31,8 +31,6 @@ export const DownLoadPage = () => {
 
       const questionType = t("question-type", { returnObjects: true });
 
-      console.log(questionType);
-
       const formattedData = quizData.map((value, index) => [
         index + 1,
         uniqueQuestions[index],

@@ -8,7 +8,7 @@
   padding-left: 20px;
   transition: all .2s ease-in;
   width: 90%;
-
+  cursor: pointer;
 
   &.clicked {
     border: 2px solid $bar-color;
