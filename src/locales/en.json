@@ -74,5 +74,6 @@
     "download-answers": "Download my answers",
     "button": "Retake quiz"
   },
-  "next-page-btn": "Next"
+  "next-page-btn": "Next",
+  "question-type": ["single-select", "single-select-image", "single-select", "multiple-select", "bubble", "email"]
 }

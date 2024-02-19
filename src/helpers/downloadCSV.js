@@ -5,20 +5,20 @@ export const downloadCSV = (data) => {
   }
 
   const rows = data.map((rowData) => {
-    if (!Array.isArray(rowData) || rowData.length !== 3) {
+    if (!Array.isArray(rowData) || rowData.length !== 4) {
       console.error("Invalid data format:", rowData);
       return "";
     }
 
-    const [questionIndex, question, value] = rowData;
+    const [questionIndex, question, type, value] = rowData;
 
-    const formattedRow = `"${questionIndex}","${question}","${value}"`;
+    const formattedRow = `"${questionIndex}","${question}","${type}","${value}"`;
 
     return formattedRow;
   });
 
   const csvContent =
-    "data:text/csv;charset=utf-8," + "№,Questions,Answers\n" + rows.join("\n");
+    "data:text/csv;charset=utf-8," + "order,title,type,answer\n" + rows.join("\n");
 
   const email = localStorage.getItem("emailValue");
 

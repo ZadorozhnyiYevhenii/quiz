@@ -73,5 +73,7 @@
     "description": "für deine Unterstützung und das bestandene Quiz",
     "download-answers": "Laden Sie meine Antworten herunter",
     "button": "Wiederholen Sie das Quiz"
-  }
+  },
+  "next-page-btn": "Próximo",
+  "question-type": ["einzelauswahl", "einzelbild-auswählen", "einzelauswahl", "mehrfachauswahl", "blase", "email"]
 }

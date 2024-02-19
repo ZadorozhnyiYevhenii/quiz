@@ -73,5 +73,7 @@
     "description": "pour nous avoir soutenu et avoir réussi le quiz",
     "download-answers": "Téléchargez mes réponses",
     "button": "Reprendre le quiz"
-  }
+  },
+  "next-page-btn": "Suivant",
+  "question-type": ["sélection-unique", "image-à-sélection-unique", "sélection-unique", "sélection-multiple", "bulle", "e-mail"]
 }

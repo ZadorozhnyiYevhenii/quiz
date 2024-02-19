@@ -1,7 +1,7 @@
 export const answerKey = {
-  age: "age",
-  gender: "gender",
   language: "language",
+  gender: "gender",
+  age: "age",
   hate: "selectedOptions",
   topics: "selectedTopics",
   email: "emailValue",

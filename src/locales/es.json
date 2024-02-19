@@ -73,6 +73,8 @@
     "description": "por apoyarnos y aprobar el cuestionario",
     "download-answers": "Descarga mis respuestas",
     "button": "Volver a hacer el cuestionario"
-  }
+  },
+  "next-page-btn": "Próximo",
+  "question-type": ["selección-única", "imagen-de-selección-única", "selección-única", "selección-múltiple", "burbuja", "correo-electrónico"]
 }
 
