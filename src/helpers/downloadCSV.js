@@ -18,7 +18,9 @@ export const downloadCSV = (data) => {
   });
 
   const csvContent =
-    "data:text/csv;charset=utf-8," + "order,title,type,answer\n" + rows.join("\n");
+    "data:text/csv;charset=utf-8," +
+    "order,title,type,answer\n" +
+    rows.join("\n");
 
   const email = localStorage.getItem("emailValue");
 

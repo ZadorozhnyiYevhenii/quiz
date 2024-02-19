@@ -6,6 +6,8 @@ import de from "./locales/de.json";
 import fr from "./locales/fr.json";
 import es from "./locales/es.json";
 
+const fallBackLocale = import.meta.VITE_DEFAULT_LOCALE || 'en';
+
 i18n
   .use(initReactI18next)
   .use(LanguageDetector)
@@ -16,8 +18,7 @@ i18n
       fr: { translation: fr },
       es: { translation: es },
     },
-    fallbackLng: "en",
-
+    fallbackLng: fallBackLocale,
     interpolation: {
       escapeValue: false,
     },

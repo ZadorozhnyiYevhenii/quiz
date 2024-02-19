@@ -1,7 +1,13 @@
 {
-  "initial-page": {
+  "language-page": {
     "title": "Was ist Ihre bevorzugte Sprache?",
-    "subtitle": "Sprache wählen"
+    "subtitle": "Sprache wählen",
+    "languages": {
+      "english": "Englisch",
+      "french": "Französisch",
+      "german": "Deutsch",
+      "spanish": "Spanisch"
+    }
   },
   "gender-page": {
     "title": "Mit welchem Geschlecht identifizierst du dich?",

@@ -29,9 +29,9 @@ export const DownLoadPage = () => {
       const questions = JSON.parse(localStorage.getItem(titlesKey));
       const uniqueQuestions = [...new Set(questions)].slice(-6);
 
-      const questionType = t('question-type', { returnObjects: true });
+      const questionType = t("question-type", { returnObjects: true });
 
-      console.log(questionType)
+      console.log(questionType);
 
       const formattedData = quizData.map((value, index) => [
         index + 1,
