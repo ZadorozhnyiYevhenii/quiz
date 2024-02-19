@@ -40,6 +40,8 @@ export const TopicsPage = () => {
     setTitle([...title, t("topics-page.title")]);
   }, []);
 
+  const topicsArray = TopicsOptions();
+
   return (
     <div className="topics">
       <BackButton />
@@ -53,7 +55,7 @@ export const TopicsPage = () => {
       />
 
       <ul className="topics__list">
-        {TopicsOptions().map((option) => (
+        {topicsArray.map((option) => (
           <li key={option.id} className="topics__item topics__item--odd">
             <CustomOption
               option={option}

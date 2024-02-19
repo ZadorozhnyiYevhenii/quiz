@@ -23,14 +23,41 @@
   "topics-page": {
     "title": "What are your favorite topics?",
     "description": "Choose up to 3 topics you like",
-    "options": {
-      "wolf": "Werewolf",
-      "romance": "Romance",
-      "action": "Action",
-      "young-adult": "Young adult",
+    "options-18-29": {
+      "fantasy": "Fantasy",
+      "science-fiction": "Science fiction",
+      "thriller": "Thriller",
+      "mystery": "Mystery",
+      "dystopian": "Dystopian",
+      "graphic-novels": "Graphic novels",
+      "nonfiction": "Nonfiction"
+    },
+    "options-30-39": {
+      "literary-fiction": "Literary fiction",
+      "historical-fiction": "Historical fiction",
+      "self-help": "Self help",
+      "memoir": "Memoir",
+      "billionaire": "Billionaire",
+      "crime-fiction": "Crime fiction",
+      "travel": "Travel"
+    },
+    "options-40-49": {
+      "thriller": "Thriller",
       "royal-obsession": "Royal obsession",
-      "bad-boy": "Bad boy",
-      "billionaire": "Billionaire"
+      "adventure": "Adventure",
+      "health": "Health",
+      "historical": "Historical",
+      "memoir": "Memoir",
+      "auto-biography": "Autobiography"
+    },
+    "options-50+": {
+      "contemporary-fiction": "Contemporary",
+      "wolf": "Werewolf",
+      "welness": "Wellness",
+      "royal-obsession": "Royal obsession",
+      "dystopian": "Dystopian",
+      "action": "Action",
+      "thriller": "Thriller"
     }
   },
   "loader": "Finding collections for you...",

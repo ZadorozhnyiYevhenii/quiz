@@ -23,14 +23,41 @@
   "topics-page": {
     "title": "Quels sont vos sujets favoris ?",
     "description": "Choisissez jusqu'à 3 sujets que vous aimez",
-    "options": {
-      "wolf": "Loup-garou",
-      "romance": "Romance",
-      "action": "Action",
-      "young-adult": "Jeune adulte",
+    "options-18-29": {
+      "fantasy": "Fantaisie",
+      "science-fiction": "la science-fiction",
+      "thriller": "Thriller",
+      "mystery": "Mystère",
+      "dystopian": "Dystopique",
+      "graphic-novels": "Romans graphiques",
+      "nonfiction": "Non-fiction"
+    },
+    "options-30-39": {
+      "literary-fiction": "Fiction littéraire",
+      "historical-fiction": "Fiction historique",
+      "self-help": "Auto-assistance",
+      "memoir": "Mémoire",
+      "billionaire": "Milliardaire",
+      "crime-fiction": "Polar",
+      "travel": "Voyage"
+    },
+    "options-40-49": {
+      "thriller": "Thriller",
       "royal-obsession": "Obsession royale",
-      "bad-boy": "Mauvais garçon",
-      "billionaire": "Milliardaire"
+      "adventure": "Aventure",
+      "health": "Santé",
+      "historical": "Historique",
+      "memoir": "Mémoire",
+      "auto-biography": "Autobiographie"
+    },
+    "options-50+": {
+      "contemporary-fiction": "Contemporaine",
+      "wolf": "Loup-garou",
+      "welness": "Bien-être",
+      "royal-obsession": "Obsession royale",
+      "dystopian": "Dystopique",
+      "action": "Action",
+      "thriller": "Thriller"
     }
   },
   "loader": "Trouver des collections pour vous...",

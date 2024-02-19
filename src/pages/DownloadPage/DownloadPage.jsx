@@ -27,7 +27,7 @@ export const DownLoadPage = () => {
     if (quizData.length > 0) {
       const questions = JSON.parse(localStorage.getItem(titlesKey));
 
-      const uniqueQuestions = [...new Set(questions)];
+      const uniqueQuestions = [...new Set(questions)].slice(-6);
 
       const formattedData = quizData.map((value, index) => [
         index + 1,

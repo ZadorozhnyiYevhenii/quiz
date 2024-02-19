@@ -23,14 +23,41 @@
   "topics-page": {
     "title": "¿Cuales son tus temas favoritos?",
     "description": "Elige hasta 3 temas que te gusten",
-    "options": {
-      "wolf": "Hombre-lobo",
-      "romance": "Romance",
-      "action": "Acción",
-      "young-adult": "Adulta joven",
+    "options-18-29": {
+      "fantasy": "Fantasía",
+      "science-fiction": "ciencia ficción",
+      "thriller": "Suspenso",
+      "mystery": "Misterio",
+      "dystopian": "distópico",
+      "graphic-novels": "Novelas gráficas",
+      "nonfiction": "No ficción"
+    },
+    "options-30-39": {
+      "literary-fiction": "Ficcion literaria",
+      "historical-fiction": "Ficción histórica",
+      "self-help": "autoayuda",
+      "memoir": "Memoria",
+      "billionaire": "multimillonario",
+      "crime-fiction": "Crimen ficcion",
+      "travel": "Viajar"
+    },
+    "options-40-49": {
+      "thriller": "Suspenso",
       "royal-obsession": "Obsesión real",
-      "bad-boy": "Chico malo",
-      "billionaire": "Multimillonario"
+      "adventure": "Aventura",
+      "health": "Salud",
+      "historical": "Histórica",
+      "memoir": "Memoria",
+      "auto-biography": "Autobiografía"
+    },
+    "options-50+": {
+      "contemporary-fiction": "Contemporánea",
+      "wolf": "Hombre-lobo",
+      "welness": "Bienestar",
+      "royal-obsession": "Obsesión real",
+      "dystopian": "distópico",
+      "action": "Acción",
+      "thriller": "Suspenso"
     }
   },
   "loader": "Buscando colecciones para ti...",
