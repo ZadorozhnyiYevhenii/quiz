@@ -29,7 +29,7 @@ export const TopicsPage = () => {
     if (selectedTopics.includes(option)) {
       setSelectedTopics(selectedTopics.filter((item) => item !== option));
     } else {
-      setSelectedTopics([...selectedTopics, option]);
+      selectedTopics.length < 3 ? setSelectedTopics([...selectedTopics, option]) : null;
     }
   };
 
