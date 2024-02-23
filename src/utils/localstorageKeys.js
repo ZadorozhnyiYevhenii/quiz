@@ -9,4 +9,6 @@ export const answerKey = {
 
 export const titlesKey = "titles";
 
+export const numberOfRequest = 'requestSent';
+
 export const answerKeyArray = Object.values(answerKey);
