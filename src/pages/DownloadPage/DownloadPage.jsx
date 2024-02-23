@@ -9,7 +9,7 @@ import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/Animat
 import "./DownLoadPage.scss";
 
 export const DownLoadPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [quizData, setQuizData] = useState([]);
 
@@ -44,6 +44,7 @@ export const DownLoadPage = () => {
 
   const handleRetakeClick = () => {
     localStorage.clear();
+    i18n.changeLanguage('en')
   };
 
   return (
@@ -61,7 +62,9 @@ export const DownLoadPage = () => {
           <div className="download-page__image" />
         </section>
       </AnimatedPageWrapper>
+
       <DownloadComponent onDownload={handleDownloadClick} />
+
       <NextPageButton
         title={t("download-page.button")}
         onClick={handleRetakeClick}
