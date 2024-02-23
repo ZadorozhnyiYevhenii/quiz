@@ -8,6 +8,8 @@ import { answerKeyArray, titlesKey } from "../../utils/localstorageKeys";
 import { AnimatedPageWrapper } from "../../components/AnimatedPageWrapper/AnimatedPageWrapper";
 import "./DownLoadPage.scss";
 
+const defaultLocale = import.meta.VITE_DEFAULT_LOCALE || "en";
+
 export const DownLoadPage = () => {
   const { t, i18n } = useTranslation();
 
@@ -44,7 +46,7 @@ export const DownLoadPage = () => {
 
   const handleRetakeClick = () => {
     localStorage.clear();
-    i18n.changeLanguage('en')
+    i18n.changeLanguage(defaultLocale);
   };
 
   return (
