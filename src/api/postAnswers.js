@@ -1,10 +1,10 @@
 import { answerKeyArray } from "../utils/localstorageKeys";
 import { BASE_URL } from "../api/core.js";
 
-const dataAnswer = {};
+const answersMap = {};
 
 answerKeyArray.forEach((key) => {
-  dataAnswer[key] = JSON.parse(localStorage.getItem(key));
+  answersMap[key] = JSON.parse(localStorage.getItem(key));
 });
 
 export const postAnswer = async () => {
@@ -14,7 +14,7 @@ export const postAnswer = async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(dataAnswer),
+      body: JSON.stringify(answersMap),
     });
 
     if (!response.ok) {
