@@ -12,7 +12,7 @@ Quiz App is a quiz where you can take the test in four different locales and dow
    - `npm run dev` for running the app
 
 3. Start the json server
-   - `json-server --watch db.json --port 3001`
+   - `npm run server`
 
 ## Technologies
 
